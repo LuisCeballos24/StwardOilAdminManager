@@ -1,45 +1,51 @@
-import React, { useState } from 'react';
-import firebase from '../utils/firebase.js'
+import { useState } from "react";
+import { auth } from "../utils/firebase";
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
-  const handleLogin = () => {
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Usuario autenticado exitosamente
-        const user = userCredential.user;
-        console.log(user);
-      })
-      .catch((error) => {
-        // Ocurrió un error durante la autenticación
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-      });
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      setEmail("");
+      setPassword("");
+      setError(null);
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   return (
-    <div className="login-container">
-      <h1>Login</h1>
-      <input
-        type="email"
-        placeholder="Correo electrónico"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Contraseña"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Iniciar sesión</button>
+    <div>
+      <h2>Iniciar sesión</h2>
+      {error && <p>{error}</p>}
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Contraseña:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+        </div>
+        <button type="submit">Iniciar sesión</button>
+      </form>
     </div>
   );
-};
+}
 
 export default Login;
