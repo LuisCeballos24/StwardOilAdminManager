@@ -1,0 +1,18 @@
+{
+  "name": "adminmanager",
+  "version": "1.0.0",
+  "description": "Sistema de Administracion para Stward Oil Corporation",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Ceballos",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.22.2",
+    "vite": "^4.3.9"
+  }
+}
