@@ -1,10 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { auth } from "../utils/firebase";
+import { useHistory } from "react-router-dom";
 
-function Login() {
+function Singin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,6 +19,10 @@ function Login() {
     } catch (error) {
       setError(error.message);
     }
+  };
+
+  const handleRegister = () => {
+    history.push("/Singup");
   };
 
   return (
@@ -44,8 +50,9 @@ function Login() {
         </div>
         <button type="submit">Iniciar sesión</button>
       </form>
+      <button onClick={handleRegister}>Registrarse</button>
     </div>
   );
 }
 
-export default Login;
+export default Singin;
