@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { auth, dbs } from '../utils/firebase';
+import { useHistory } from 'react-router-dom';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -7,6 +8,7 @@ const Signup = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const history = useHistory();
 
   const handleSignup = () => {
     auth
@@ -23,6 +25,9 @@ const Signup = () => {
           lastName: lastName,
           phoneNumber: phoneNumber,
         });
+
+        // Redirigir al usuario a la página de menú después del registro
+        history.push('/Singin');
       })
       .catch((error) => {
         // Ocurrió un error durante el registro

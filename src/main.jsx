@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Singin from './pages/Singin';
 import Singup from './pages/Singup';
+import Menu from './pages/Menu';
+import AdminPage from './pages/AdminPage';
 //import Home from './Home';
 //import Profile from './Profile';
 
@@ -13,6 +15,8 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Singin} />
         <Route exact path="/Singup" component={Singup} />
+        <Route exact path="/Menu" component={Menu} />
+        <Route exact path="/AdminPage" component={AdminPage} />
       </Switch>
     </Router>
   );

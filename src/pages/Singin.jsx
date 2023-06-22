@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth } from "../utils/firebase";
 import { useHistory } from "react-router-dom";
 
-function Singin() {
+function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -16,13 +16,16 @@ function Singin() {
       setEmail("");
       setPassword("");
       setError(null);
+
+      // Redirigir al usuario al menú después de iniciar sesión correctamente
+      history.push("/Menu");
     } catch (error) {
       setError(error.message);
     }
   };
 
   const handleRegister = () => {
-    history.push("/Singup");
+    history.push("/Signup");
   };
 
   return (
@@ -55,4 +58,4 @@ function Singin() {
   );
 }
 
-export default Singin;
+export default Signin;
