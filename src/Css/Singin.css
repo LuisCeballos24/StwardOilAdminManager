@@ -1,0 +1,89 @@
+/* BarcoFondo */
+.barcoFondo{
+    position: absolute;
+    z-index: -1;
+    background: center cover no-repeat;
+    height: 100%;
+    width: 100%;
+}
+/* Menu Singin ay Singup */
+.sing{
+    display: flex;
+    align-items: center;
+}
+
+/* InfoStwardCorp */
+.infoStwardCorp{
+    width: 40%;
+    min-height: 100vh;
+    color: white;
+    background-color: rgb(15, 23, 42, 0.85);
+}
+.infoStwardCorp img{
+    width: 60%;
+    margin: 25vh 0 3% 20%;
+}
+.infoStwardCorp p{
+    font-size: 1.4rem;
+    width: 70%;
+    margin-left: 15%;
+    text-align: justify;
+}
+
+/* Contenido */
+.contenidoPrincipal{
+    width: 50%;
+    height: 94vh;
+    color: white;
+    background-color: rgb(15, 23, 42, 0.55);
+    padding: 3vh 10%;
+    font-size: 1.3rem;
+}
+
+.subTitulo{
+    margin: -3% 0 10% 0;
+    text-align: justify;
+    font-size: 1.6rem;
+}
+.gris{
+    color: rgb(193, 193, 193);
+}
+
+.divRecordar{
+    padding-left: 16%;
+}
+.divInputs{
+    width: 80%;
+    margin: 4% 0;
+    padding-left: 16%;
+}
+::placeholder{
+    color: rgb(193, 193, 193);
+}
+.divInputs input{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 80%;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 1.2rem;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 2%;
+    background-color: transparent;
+    border: 2px solid white;
+}
+.iniciarSesion{
+    font-size: 1.3rem;
+    padding: 1% 10%;
+    margin: 8% 0 4% 30% !important;
+}
+
+.bottomPrimario{
+    background-color: #167ee6;
+    color: white;
+    border-radius: 25px;
+}

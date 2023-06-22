@@ -6,8 +6,12 @@ import Singin from './pages/Singin';
 import Singup from './pages/Singup';
 import Menu from './pages/Menu';
 import AdminPage from './pages/AdminPage';
+
 //import Home from './Home';
 //import Profile from './Profile';
+import NotFound from './pages/NotFound';
+
+import './main.css';
 
 const App = () => {
   return (
@@ -17,6 +21,7 @@ const App = () => {
         <Route exact path="/Singup" component={Singup} />
         <Route exact path="/Menu" component={Menu} />
         <Route exact path="/AdminPage" component={AdminPage} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </Router>
   );

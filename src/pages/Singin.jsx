@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { auth } from "../utils/firebase";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+
+// Components
+import { InfoStwardCorp } from "../components/InfoStwardCorp";
+
+//Assets
+import { FondoBarco } from "../components/FondoBarco";
+
+// Css
+import '../Css/Singin.css';
 
 function Signin() {
   const [email, setEmail] = useState("");
@@ -29,32 +38,48 @@ function Signin() {
   };
 
   return (
-    <div>
-      <h2>Iniciar sesión</h2>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
+    <>
+      <FondoBarco />
+      <div className="sing">
+        <InfoStwardCorp />
+        <div className="contenidoPrincipal">
+          <h1>Bienvenido👋</h1>
+          <p className="subTitulo gris">Sistema de gestión de usuarios de Stward Oil</p>
+          {error && <p>{error}</p>}
+          <form onSubmit={handleSubmit}>
+            <div className="divInputs">
+              <label htmlFor="email">Correo:</label><br/>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                placeholder="i.e. donovan.clarck20@gmail.com"
+                onChange={(event) => setEmail(event.target.value)}
+              />
+            </div>
+            <div className="divInputs">
+              <label htmlFor="password">Contraseña:</label><br/>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                placeholder="**********"
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </div>
+            <div className="divRecordar">
+              <input type="checkbox" name="recordar" id="recordar" />
+              <label for="recordar">Recordar Sesión</label>
+            </div>
+            <button type="submit" className="bottomPrimario iniciarSesion" style={{margin: '5% 0'}}>Iniciar sesión</button>
+          </form>
+          <div style={{textAlign: 'center'}}>
+            <p>¿No tienes una cuenta? <Link to={"./Singup"}>Crea una cuenta</Link></p>
+            <p>¿Problemas al iniciar sesión? <Link to={"./Singup"}>Recupere la cuenta</Link></p>
+          </div>
         </div>
-        <div>
-          <label htmlFor="password">Contraseña:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-        </div>
-        <button type="submit">Iniciar sesión</button>
-      </form>
-      <button onClick={handleRegister}>Registrarse</button>
-    </div>
+      </div>
+    </>
   );
 }
 
