@@ -1,0 +1,112 @@
+/* BarcoFondo */
+.barcoFondo{
+    position: absolute;
+    z-index: -1;
+    background: center cover no-repeat;
+    height: 100%;
+    width: 100%;
+}
+/* Menu Singin ay Singup */
+.sing{
+    display: flex;
+    align-items: center;
+}
+
+/* InfoStwardCorp */
+.infoStwardCorp{
+    width: 40%;
+    min-height: 100vh;
+    color: white;
+    background-color: rgb(15, 23, 42, 0.85);
+}
+.infoStwardCorp img{
+    width: 60%;
+    margin: 20vh 0 3% 20%;
+}
+.infoStwardCorp p{
+    font-size: 1.4rem;
+    width: 70%;
+    margin-left: 15%;
+    text-align: justify;
+}
+.btnScrollIniciarSesion{
+    color: white;
+    display: none;
+    margin: 10% 0 0 30%;
+}
+
+/* Contenido */
+.contenidoPrincipal{
+    width: 50%;
+    height: 94vh;
+    color: white;
+    background-color: rgb(15, 23, 42, 0.55);
+    padding: 3vh 10%;
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.subTitulo{
+    margin: -3% 0 10% 0;
+    text-align: justify;
+    font-size: 1.6rem;
+}
+.gris{
+    color: rgb(193, 193, 193);
+}
+::placeholder{
+    color: rgb(193, 193, 193);
+}
+
+.iniciarSesion, .btnScrollIniciarSesion{
+    font-size: 1.3rem;
+    padding: 1% 10%;
+}
+.bottomPrimario{
+    background-color: #167ee6;
+    color: white;
+    border-radius: 25px;
+}
+.linkTo{
+    font-weight: bold; 
+    color: #2563eb;
+}
+
+/* Responsive */
+@media only screen and (max-width: 900px) {
+    .sing {
+        display: block;
+    }
+    .infoStwardCorp{
+        width: 100%;
+        height: 70% !important;
+    }
+    .contenidoPrincipal{
+        width: 90%;
+        height: 100%;
+        padding: 5% 5%;
+        margin: 0px;    
+        background-color: rgb(15, 23, 42);
+    }
+    .btnScrollIniciarSesion{
+        display: block;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .divInputs, .divInputs2{
+        padding: 0px !important;
+        display: block !important;
+        justify-content: center !important;
+    }
+    .divInputs div, .divInputs2 div{
+        margin: 4% 0;
+    }
+    .divInputs2 div{
+        width: 92% !important;
+    }
+    .divInputs div input, .divInputs2 div input{
+        width: 100% !important;
+    }
+}
+  

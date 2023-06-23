@@ -9,6 +9,7 @@ import { InfoStwardCorp } from "../components/InfoStwardCorp";
 import { FondoBarco } from "../components/FondoBarco";
 
 // Css
+import '../Css/Sing.css';
 import '../Css/Singin.css';
 
 function Signin() {
@@ -69,13 +70,13 @@ function Signin() {
             </div>
             <div className="divRecordar">
               <input type="checkbox" name="recordar" id="recordar" />
-              <label for="recordar">Recordar Sesión</label>
+              <label htmlFor="recordar">Recordar Sesión</label>
             </div>
             <button type="submit" className="bottomPrimario iniciarSesion" style={{margin: '5% 0'}}>Iniciar sesión</button>
           </form>
           <div style={{textAlign: 'center'}}>
-            <p>¿No tienes una cuenta? <Link to={"./Singup"}>Crea una cuenta</Link></p>
-            <p>¿Problemas al iniciar sesión? <Link to={"./Singup"}>Recupere la cuenta</Link></p>
+            <p>¿No tienes una cuenta? <Link to={"./Singup"} className="linkTo">Crea una cuenta</Link></p>
+            <p>¿Problemas al iniciar sesión? <Link to={"./Singup"} className="linkTo">Recupere la cuenta</Link></p>
           </div>
         </div>
       </div>
