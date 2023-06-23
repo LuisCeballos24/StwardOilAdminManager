@@ -46,7 +46,8 @@ function Signin() {
         <div className="contenidoPrincipal">
           <h1>Bienvenido👋</h1>
           <p className="subTitulo gris">Sistema de gestión de usuarios de Stward Oil</p>
-          {error && <p>{error}</p>}
+          {error && <p style={{margin: '0px', color: 'red', backgroundColor: 'white', borderRadius: '10px', padding: '2px 5px'}}>Error al iniciar sesión...</p> }
+          {error && console.log}
           <form onSubmit={handleSubmit}>
             <div className="divInputs">
               <label htmlFor="email">Correo:</label><br/>

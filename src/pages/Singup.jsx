@@ -16,6 +16,7 @@ import "../Css/Singup.css";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -112,8 +113,8 @@ const Signup = () => {
                   type="password"
                   id="password2"
                   placeholder="***********"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  value={password2}
+                  onChange={(e) => setPassword2(e.target.value)}
                 />
               </div>
               <div>
