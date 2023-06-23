@@ -5,9 +5,6 @@ import { useHistory, Link } from "react-router-dom";
 // Components
 import { InfoStwardCorp } from "../components/InfoStwardCorp";
 
-//Assets
-import { FondoBarco } from "../components/FondoBarco";
-
 // Css
 import '../Css/Sing.css';
 import '../Css/Singin.css';
@@ -40,15 +37,14 @@ function Signin() {
 
   return (
     <>
-      <FondoBarco />
-      <div className="sing">
+      <div className="sing barcoFondo">
         <InfoStwardCorp />
         <div className="contenidoPrincipal">
           <h1>Bienvenido👋</h1>
           <p className="subTitulo gris">Sistema de gestión de usuarios de Stward Oil</p>
-          {error && <p style={{margin: '0px', color: 'red', backgroundColor: 'white', borderRadius: '10px', padding: '2px 5px'}}>Error al iniciar sesión...</p> }
+          {error && <p className="mensajeAlerta">Error al iniciar sesión...</p> }
           {error && console.log}
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} style={{padding: '2% 0'}}>
             <div className="divInputs">
               <label htmlFor="email">Correo:</label><br/>
               <input

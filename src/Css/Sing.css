@@ -1,8 +1,6 @@
 /* BarcoFondo */
 .barcoFondo{
-    position: absolute;
-    z-index: -1;
-    background: center cover no-repeat;
+    background: url('../../public/BarcoFondo13.jpeg') center no-repeat fixed;
     height: 100%;
     width: 100%;
 }
@@ -72,6 +70,15 @@
     font-weight: bold; 
     color: #2563eb;
 }
+.mensajeAlerta{
+    margin-left: '16%';
+    color: 'red';
+    background-color: 'white';
+    border-radius: '10px';
+    padding: '0px 5px';
+    text-align: 'center';
+    width: '300px';
+}
 
 /* Responsive */
 @media only screen and (max-width: 900px) {
@@ -86,7 +93,7 @@
         width: 90%;
         height: 100%;
         padding: 5% 5%;
-        margin: 0px;    
+        margin: 0px;
         background-color: rgb(15, 23, 42);
     }
     .btnScrollIniciarSesion{

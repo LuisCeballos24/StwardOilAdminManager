@@ -6,7 +6,6 @@ import { useHistory, Link } from "react-router-dom";
 import { InfoStwardCorp } from "../components/InfoStwardCorp";
 
 //Assets
-import { FondoBarco } from "../components/FondoBarco";
 import GoogleIcon from "../../public/GoogleIcon.png";
 
 // Css
@@ -51,8 +50,7 @@ const Signup = () => {
 
   return (
     <>
-      <FondoBarco />
-      <div className="sing">
+      <div className="sing barcoFondo">
         <InfoStwardCorp />
         <div className="contenidoPrincipal">
           <h1>Stward Te Saluda👋</h1>

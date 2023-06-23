@@ -1,24 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
+// Components
+import { HeaderMenu } from "../components/HeaderMenu";
+import { Cards } from "../components/Cards";
+import { Footer } from "../components/Footer";
+
+// Assets
+import Usuarios from '../../public/Usuarios.jpg';
+import Transacciones from '../../public/Transacciones.jpg';
+import Barcos from '../../public/Barcos.png';
+import Servicios from '../../public/Servicios.png';
+
+// Css
+import "../Css/Menu.css";
 
 const Menu = () => {
   return (
-    <div>
-      <h1>Menú</h1>
-      <ul>
+    <div className="barcoFondo">
+      <HeaderMenu title="Gestiones" />
+      <ul className="cardsMenu">
         <li>
-          <Link to="/AdminPage">Usuario</Link>
+          <Link to="/AdminPage"><Cards title="Usuarios" img={Usuarios} alt="Imagen de la sección Usuarios"/></Link>
         </li>
         <li>
-          <Link to="/transacciones">Transacciones</Link>
+          <Link to="/transacciones"><Cards title="Transacciones" img={Transacciones} alt="Imagen de la sección Transacciones"/></Link>
         </li>
         <li>
-          <Link to="/barcos">Barcos</Link>
+          <Link to="/barcos"><Cards title="Barcos" img={Barcos} alt="Imagen de la sección Barcos"/></Link>
         </li>
         <li>
-          <Link to="/servicios">Servicios</Link>
+          <Link to="/servicios"><Cards title="Servicios" img={Servicios} alt="Imagen de la sección Servicios"/></Link>
         </li>
       </ul>
+      <Footer />
     </div>
   );
 };
