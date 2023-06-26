@@ -4,7 +4,7 @@
     height: 100%;
     width: 100%;
 }
-/* Menu Singin ay Singup */
+/* Menu Singin y Singup */
 .sing{
     display: flex;
     align-items: center;
@@ -13,24 +13,23 @@
 /* InfoStwardCorp */
 .infoStwardCorp{
     width: 40%;
+    row-gap: 5rem;
     min-height: 100vh;
     color: white;
     background-color: rgb(15, 23, 42, 0.85);
 }
 .infoStwardCorp img{
-    width: 60%;
-    margin: 20vh 0 3% 20%;
+    width: 70%;
 }
 .infoStwardCorp p{
     font-size: 1.4rem;
     width: 70%;
-    margin-left: 15%;
     text-align: justify;
 }
 .btnScrollIniciarSesion{
     color: white;
     display: none;
-    margin: 10% 0 0 30%;
+    width: 60%;
 }
 
 /* Contenido */
@@ -41,8 +40,6 @@
     background-color: rgb(15, 23, 42, 0.55);
     padding: 3vh 10%;
     font-size: 1.3rem;
-    display: grid;
-    grid-template-columns: auto;
 }
 
 .subTitulo{
@@ -67,7 +64,7 @@
     border-radius: 25px;
 }
 .linkTo{
-    font-weight: bold; 
+    font-weight: bold;
     color: #2563eb;
 }
 .mensajeAlerta{
@@ -80,40 +77,107 @@
     width: '300px';
 }
 
+/* Estilos del Singin */
+.divRecordar{
+    width: 90%;
+    margin: 4% 0 4% 10%;
+}
+.divInputs{
+    width: 80%;
+    margin: 2% 10% !important;
+    display: block !important;
+}
+.divInputs input, .divInputs2 input{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 8px 5px;
+    font-size: 1.2rem;
+    width: 95%;
+}
+input[type=checkbox] {
+    transform: scale(1.5);
+    border: 2px solid white;
+    margin-right: 4%;
+}
+
+/* Estilos del Singup */
+.subTitulo{
+    margin-bottom: 3%;
+}
+.divInputs2{
+    width: 100%;
+    margin: 2% 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.divInputs2 div{
+    width: inherit;
+}
+.btnGoogle{
+    font-size: 1.3rem;
+    padding: 1% 16%;
+    margin: 0% 10% !important;
+    background-color: #1e293b;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnGoogle img{
+    width: 25px;
+    margin: 0 15px 0 0;
+}
+.btnGoogle p{
+    margin: 0px;
+}
+.flexCenterColumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* Responsive */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
     .sing {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .infoStwardCorp{
         width: 100%;
-        height: 70% !important;
     }
     .contenidoPrincipal{
         width: 90%;
-        height: 100%;
-        padding: 5% 5%;
-        margin: 0px;
-        background-color: rgb(15, 23, 42);
+        padding: 5%;
     }
     .btnScrollIniciarSesion{
         display: block;
     }
 }
 @media only screen and (max-width: 600px) {
-    .divInputs, .divInputs2{
-        padding: 0px !important;
-        display: block !important;
-        justify-content: center !important;
+    
+    .contenidoPrincipal{
+        padding: 25% 5%;
+        width: 90%;
     }
-    .divInputs div, .divInputs2 div{
-        margin: 4% 0;
+    .divInputs2{
+        display: block;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
     }
     .divInputs2 div{
-        width: 92% !important;
+        width: 100%;
     }
     .divInputs div input, .divInputs2 div input{
-        width: 100% !important;
+        width: 92% !important;
     }
 }
-  

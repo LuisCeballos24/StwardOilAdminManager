@@ -4,11 +4,12 @@ import LogoPrincipal from '../../public/LogoPrincipal.png';
 export const InfoStwardCorp = () => {
 
   function btnToScroll() {
-    window.scrollTo({ top: 2000, behavior: 'smooth'}); 
+    let scroll = document.getElementById('tituloScroll').offsetTop;
+    window.scrollTo({ top: scroll, behavior: 'smooth'}); 
   }
 
   return (
-    <div className="infoStwardCorp">
+    <div className="flexCenterColumn infoStwardCorp">
         <img src={LogoPrincipal}/>
         <p>
             Servicios Marítimos en el Canal de Panamá desde 2004. 

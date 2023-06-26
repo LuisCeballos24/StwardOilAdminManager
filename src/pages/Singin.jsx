@@ -7,7 +7,6 @@ import { InfoStwardCorp } from "../components/InfoStwardCorp";
 
 // Css
 import '../Css/Sing.css';
-import '../Css/Singin.css';
 
 function Signin() {
   const [email, setEmail] = useState("");
@@ -39,14 +38,14 @@ function Signin() {
     <>
       <div className="sing barcoFondo">
         <InfoStwardCorp />
-        <div className="contenidoPrincipal">
-          <h1>Bienvenido👋</h1>
+        <div className="contenidoPrincipal flexCenterColumn">
+          <h1 id="tituloScroll">Bienvenido👋</h1>
           <p className="subTitulo gris">Sistema de gestión de usuarios de Stward Oil</p>
           {error && <p className="mensajeAlerta">Error al iniciar sesión...</p> }
           {error && console.log}
-          <form onSubmit={handleSubmit} style={{padding: '2% 0'}}>
+          <form onSubmit={handleSubmit} style={{padding: '2% 0', width: '100%'}} className="flexCenterColumn">
             <div className="divInputs">
-              <label htmlFor="email">Correo:</label><br/>
+              <label htmlFor="email">Correo:</label>
               <input
                 type="email"
                 id="email"
@@ -56,7 +55,7 @@ function Signin() {
               />
             </div>
             <div className="divInputs">
-              <label htmlFor="password">Contraseña:</label><br/>
+              <label htmlFor="password">Contraseña:</label>
               <input
                 type="password"
                 id="password"

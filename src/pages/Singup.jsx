@@ -10,7 +10,6 @@ import GoogleIcon from "../../public/GoogleIcon.png";
 
 // Css
 import "../Css/Sing.css";
-import "../Css/Singup.css";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -52,16 +51,15 @@ const Signup = () => {
     <>
       <div className="sing barcoFondo">
         <InfoStwardCorp />
-        <div className="contenidoPrincipal">
-          <h1>Stward Te Saluda👋</h1>
+        <div className="contenidoPrincipal flexCenterColumn">
+          <h1 id="tituloScroll">Stward Te Saluda👋</h1>
           <p className="subTitulo gris">
             Sistema de gestión de usuarios de Stward Oil
           </p>
-          <form>
+          <form className="flexCenterColumn">
             <div className="divInputs2">
               <div>
                 <label htmlFor="nombre">Nombre:</label>
-                <br />
                 <input
                   type="text"
                   id="nombre"
@@ -72,7 +70,6 @@ const Signup = () => {
               </div>
               <div>
                 <label htmlFor="apellido">Apellido:</label>
-                <br />
                 <input
                   type="text"
                   id="apellido"
@@ -129,6 +126,7 @@ const Signup = () => {
             <button
               onClick={handleSignup}
               className="bottomPrimario iniciarSesion"
+              style={{margin: '5% 0'}}
             >
               Crear Cuenta
             </button>
